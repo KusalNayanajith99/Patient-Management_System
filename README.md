@@ -38,35 +38,35 @@ Each microservice typically has a `help.md` file within its directory for specif
 
 Here's an overview of the microservice interactions within the Docker network during development:
 
-![Development Architecture](assets/Development architecture.png)
+![Development Architecture](assets/development-architecture.png)
 
 ### Spring Boot Service Architecture
 
 Each Spring Boot microservice follows a standard architectural pattern:
 
-![Spring Boot Architecture](assets/Springboot Architecture.png)
+![Spring Boot Architecture](assets/springboot-architecture.png)
 
 ### gRPC Communication Flow
 
 The Patient Service communicates with the Billing Service using gRPC:
 
-![gRPC Architecture](assets/GRPC Architecture.png)
+![gRPC Architecture](assets/grpc-architecture.png)
 
 ### Kafka Event Streaming
 
 Kafka is used for asynchronous event streaming between services, specifically for patient-related events:
 
-![Kafka Architecture](assets/Kafka Architecture.png)
+![Kafka Architecture](assets/kafka-architecture.png)
 
 ### API Gateway Integration
 
 Before implementing an API Gateway, a frontend client would typically need to know the specific addresses and ports of each microservice, leading to tightly coupled communication and management overhead:
 
-![API Gateway Issue - Direct Client-to-Service Communication](assets/Api gateways issue.png)
+![API Gateway Issue - Direct Client-to-Service Communication](assets/api-gateways-issue.png)
 
 To centralize access, simplify client interactions, and provide a single entry point, an API Gateway is introduced. It handles request routing, load balancing, and potentially authentication/authorization, abstracting the underlying microservice topology from the client:
 
-![API Gateway Solution - Centralized Access](assets/Api gateways solution.png)
+![API Gateway Solution - Centralized Access](assets/api-gateways-solution.png)
 
 This provides a more robust and scalable solution for managing external traffic to the microservices.
 
@@ -74,7 +74,7 @@ This provides a more robust and scalable solution for managing external traffic 
 
 The authentication process involves the Auth Service and API Gateway for secure access:
 
-![Introduction to Auth](assets/Intro to Auth.png)
+![Introduction to Auth](assets/intro-to-auth.png)
 
 
 ## 📈 Project Progress & Key Milestones
@@ -110,7 +110,7 @@ This project is currently under active development. The following outlines the m
 
 Here's a depiction of the planned deployment architecture using AWS services (simulated via LocalStack):
 
-![Deployment Architecture](assets/Deployment Architecture.png)
+![Deployment Architecture](assets/deployment-architecture.png)
 
 *   **LocalStack Setup**: Configuring LocalStack to simulate AWS services locally.
 *   **AWS CLI & IAC Introduction**: Familiarization with AWS CLI and Infrastructure as Code (IaC) principles using CloudFormation.
