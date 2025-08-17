@@ -1,4 +1,4 @@
-# Patient Management System (WIP)
+# Patient Management System
 
 This project is a work-in-progress **Patient Management System** built using a microservices architecture. It aims to demonstrate various modern development practices including gRPC for inter-service communication, Kafka for event streaming, an API Gateway for routing and authentication, and containerization with Docker. The infrastructure setup is also being explored with AWS services simulated locally using LocalStack.
 
@@ -104,7 +104,16 @@ This project is currently under active development. The following outlines the m
 
 ### Testing
 
-*   **Integration Testing**: Setting up and writing integration tests to verify the end-to-end flow of key functionalities like login and patient retrieval.
+The project incorporates various testing methodologies to ensure reliability and functionality:
+
+*   **Unit Testing**: Tests individual units (classes, methods) in isolation.
+*   **Integration Testing**: Tests multiple components working together, such as a controller, service, repository. This includes setting up and writing integration tests to verify the end-to-end flow of key functionalities like login and patient retrieval.
+*   **E2E Testing**: Tests the complete workflow of the application, from UI to API.
+*   **Other Testing Aspects**: The project also touches upon concepts of Security Testing, Performance Testing, Contract Testing, Acceptance Testing, etc.
+
+In this level of our project use Integration Testing. This is the tests that we automate. For that we use **REST-assured** open-sourced online tool. 
+
+![Introduction to Testing](assets/inro-to-testing.png)
 
 ### Cloud Infrastructure (LocalStack & AWS)
 
